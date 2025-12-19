@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Players | Football Agency Sierra Leone</title>
+
+  <!-- =========================
+       PLAYERS PAGE – UNIQUE COLOR & LAYOUT
+       (RELATED TO ABOUT, NOT IDENTICAL)
+  ========================= -->
+  <style>
+    :root {
+      --players-primary: #0d9488;   /* Teal */
+      --players-secondary: #facc15; /* Soft Gold */
+      --players-dark: #042f2e;      /* Deep Teal */
+      --players-light: #f0fdfa;     /* Mint */
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--players-light);
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { width: 100%; display: block; }
+
+    /* =========================
+       NAVIGATION (MATCHES ABOUT STYLE)
+    ========================= */
+    nav {
+      background: linear-gradient(90deg, var(--players-dark), #064e4c);
+      padding: 16px 6%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--players-secondary);
+    }
+
+    /* =========================
+       PAGE HEADER (DIFFERENT HERO STYLE)
+    ========================= */
+    .players-header {
+      background: linear-gradient(135deg, rgba(4,47,46,0.9), rgba(13,148,136,0.85)),
+                  url("images/players-bg.jpg") center/cover no-repeat;
+      padding: 110px 6% 90px;
+      color: var(--white);
+    }
+
+    .players-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .players-header p {
+      max-width: 620px;
+      font-size: 1.05rem;
+      color: #d1fae5;
+    }
+
+    /* =========================
+       PLAYERS GRID SECTION
+    ========================= */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 6%;
+    }
+
+    .container h2 {
+      font-size: 2.4rem;
+      margin-bottom: 50px;
+      color: var(--players-dark);
+      text-align: center;
+    }
+
+    .players-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
+    }
+
+    .player-card {
+      background: var(--white);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+      transition: 0.35s;
+      position: relative;
+    }
+
+    .player-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, var(--players-primary), var(--players-secondary));
+    }
+
+    .player-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .player-image {
+      height: 200px;
+      background: linear-gradient(135deg, #ccfbf1, #99f6e4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: var(--players-dark);
+    }
+
+    .player-info {
+      padding: 30px;
+    }
+
+    .player-info h3 {
+      font-size: 1.35rem;
+      margin-bottom: 5px;
+      color: var(--players-dark);
+    }
+
+    .player-position {
+      color: var(--players-primary);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .player-info p {
+      font-size: 0.9rem;
+      color: #475569;
+      margin-bottom: 6px;
+    }
+
+    /* =========================
+       FOOTER (PLAYERS VARIANT)
+    ========================= */
+    footer {
+      background: linear-gradient(135deg, var(--players-dark), #064e4c);
+      color: #cbd5e1;
+      text-align: center;
+      padding: 35px 12px;
+    }
+
+    footer p:last-child {
+      font-size: 0.85rem;
+      margin-top: 8px;
+      color: #94a3b8;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media (max-width: 768px) {
+      .players-header h1 { font-size: 2.2rem; }
+      .container { padding: 70px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="players.html" class="active">Players</a></li>
+      <li><a href="matches.html">Matches</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="players-header">
+    <h1>Our Players</h1>
+    <p>
+      Discover the talented footballers represented by Football Agency Sierra Leone,
+      each supported with professional guidance and international exposure.
+    </p>
+  </header>
+
+  <!-- PLAYERS GRID -->
+  <section class="container">
+    <div class="players-grid">
+
+      <div class="player-card">
+        <div class="player-image"><img src="Img/MO.jpg" alt=""></div>
+        <div class="player-info">
+          <h3>Mohamed Kamara</h3>
+          <p class="player-position">Forward</p>
+          <p><strong>Age:</strong> 22</p>
+          <p><strong>Height:</strong> 1.82m</p>
+          <p><strong>Previous Club:</strong> East End Lions</p>
+          <p>Clinical finisher with pace and strong off-ball movement.</p>
+        </div>
+      </div>
+
+      <div class="player-card">
+        <div class="player-image"><img src="Img/Kai.jpg" alt=""></div>
+        <div class="player-info">
+          <h3>Kai Kamara</h3>
+          <p class="player-position">Midfielder</p>
+          <p><strong>Age:</strong> 23</p>
+          <p><strong>Height:</strong> 1.78m</p>
+          <p><strong>Previous Club:</strong> FC Kallon</p>
+          <p>Creative playmaker known for vision and accurate passing.</p>
+        </div>
+      </div>
+
+     <div class="player-card">
+  <div class="player-image">
+  <img src="Img/Juma B.webp" alt=""></div>
+  <div class="player-info">
+    <h3>Juma Bah</h3>
+    <p class="player-position">Defender</p>
+    <p><strong>Age:</strong> 19</p>
+    <p><strong>Height:</strong> 1.85m</p>
+    <p><strong>Previous Club:</strong> Mighty Blackpool</p>
+    <p>Physically strong defender with aerial dominance.</p>
+  </div>
+</div>
+
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Football Agency Sierra Leone. All Rights Reserved.</p>
+    <p>Representing Talent • Elevating Careers • Expanding Opportunity</p>
+  </footer>
+
+</body>
+</html>

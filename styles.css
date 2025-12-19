@@ -1,0 +1,624 @@
+/* =========================
+   BASE RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f1f3f6;
+    color: #222;
+    line-height: 1.7;
+}
+
+/* =========================
+   NAVIGATION (AGENCY STYLE)
+========================= */
+nav {
+    background: #0b1c14;
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background: #2ecc71;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   HERO SECTION (SPLIT FEEL)
+========================= */
+.hero {
+    background: #ffffff;
+    padding: 5rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #0b1c14;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    color: #555;
+}
+
+/* =========================
+   BUTTONS (FLAT AGENCY)
+========================= */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: #0b1c14;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #145a32;
+}
+
+.btn-secondary {
+    border: 2px solid #0b1c14;
+    color: #0b1c14;
+    background: transparent;
+}
+
+.btn-secondary:hover {
+    background: #0b1c14;
+    color: #fff;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem 2rem;
+}
+
+/* =========================
+   SECTION HEADERS
+========================= */
+h2 {
+    font-size: 2.2rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #0b1c14;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+/* =========================
+   NEWS / CONTENT GRID
+========================= */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.news-card {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    padding: 1.8rem;
+    transition: border-color 0.3s ease;
+}
+
+.news-card:hover {
+    border-color: #2ecc71;
+}
+
+.news-image {
+    height: 180px;
+    background: #e9ecef;
+    margin-bottom: 1rem;
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   PLAYER CARDS (AGENCY LOOK)
+========================= */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.player-card {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.player-image {
+    height: 280px;
+    background: #0b1c14;
+}
+
+.player-info {
+    padding: 1.5rem;
+}
+
+.player-position {
+    color: #2ecc71;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   MATCHES (CLEAN TABLE STYLE)
+========================= */
+.match-card {
+    background: #fff;
+    border-left: 5px solid #0b1c14;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.match-score {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0b1c14;
+}
+
+/* =========================
+   ABOUT / INFO BLOCKS
+========================= */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 2rem;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-info,
+.contact-form {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* =========================
+   FOOTER (MINIMAL)
+========================= */
+footer {
+    background: #0b1c14;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #0b2d1f;
+    padding: 15px 40px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    color: #1dd1a1;
+}
+
+/* ===== HERO SECTION ===== */
+.about-hero {
+    height: 80vh;
+    background: url("images/football-bg.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    max-width: 600px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.hero-box h1 {
+    color: #0b2d1f;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.hero-box p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #0b2d1f;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #1dd1a1;
+    color: #000;
+}
+
+/* ===== IMAGE LAYOUT SECTION ===== */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.image-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-8px);
+}
+
+.image-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.image-card-content {
+    padding: 25px;
+}
+
+.image-card-content h3 {
+    color: #0b2d1f;
+    margin-bottom: 10px;
+}
+
+.image-card-content p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #0b2d1f;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+}
+/* Global */
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    margin: 0;
+}
+
+/* Header */
+.main-header {
+    background: #0b1f3a;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #1dd1a1;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #1dd1a1;
+}
+
+.nav-btn {
+    background: #1dd1a1;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #0b1f3a !important;
+}
+
+/* Hero */
+.hero-section {
+    height: 90vh;
+    background: url("C:\Users\abuba\OneDrive\BARRY website\DIT\Img\542712538_122164185362454207_6222374248445636243_n.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+    height: 100%;
+    background: rgba(11, 31, 58, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    color: #1dd1a1;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    color: #eaeaea;
+    margin: 20px 0;
+}
+
+.btn-primary {
+    background: #1dd1a1;
+    padding: 12px 25px;
+    color: #0b1f3a;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.btn-outline {
+    border: 2px solid #1dd1a1;
+    padding: 12px 25px;
+    color: #1dd1a1;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+/* Sections */
+section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.4rem;
+    color: #0b1f3a;
+}
+
+/* Cards */
+.service-grid,
+.news-grid,
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-card,
+.news-card,
+.highlight-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Footer */
+.main-footer {
+    background: #0b1f3a;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+}
+/* =========================
+   PAGE HEADERS (ALL PAGES)
+========================= */
+.page-header {
+    padding: 5rem 2rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.page-header-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+}
+
+.page-header-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Unique Backgrounds */
+.home-header {
+    background: linear-gradient(135deg, #0b1c14, #145a32);
+}
+
+.about-header {
+    background: linear-gradient(135deg, #0b2d1f, #1e8449);
+}
+
+.players-header {
+    background: linear-gradient(135deg, #0b1f3a, #1f3c88);
+}
+
+.matches-header {
+    background: linear-gradient(135deg, #2c2c2c, #0b1c14);
+}
+
+.contact-header {
+    background: linear-gradient(135deg, #1b2631, #117a65);
+}
+/* =========================
+   IMAGE INSERT BOX
+========================= */
+.image-insert-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.image-insert-box img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.image-insert-content h3 {
+    color: #0b1c14;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.image-insert-content p {
+    color: #555;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .image-insert-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+.player-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}

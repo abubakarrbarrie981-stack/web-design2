@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Agency Sierra Leone | Home</title>
+
+  <!-- =========================
+       GLOBAL STYLES (UNIQUE THEME)
+  ========================= -->
+  <style>
+    :root {
+      --primary: #0b5ed7;      /* Deep Blue */
+      --secondary: #0f9d58;    /* Green Accent */
+      --dark: #0e1a24;         /* Dark Navy */
+      --light: #f5f7fa;        /* Light Gray */
+      --white: #ffffff;
+      --gold: #c9a227;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--light);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 700;
+    }
+
+    /* =========================
+       HEADER / NAVIGATION
+    ========================= */
+    .main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(14, 26, 36, 0.95);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links li a {
+      color: #ddd;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: var(--gold);
+    }
+
+    .nav-btn {
+      background: var(--secondary);
+      padding: 8px 18px;
+      border-radius: 20px;
+      color: var(--white) !important;
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================= */
+    .hero-section {
+      height: 100vh;
+      background: linear-gradient(rgba(14,26,36,0.75), rgba(14,26,36,0.85)),
+                  url("images/football-hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      color: var(--white);
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      color: #e0e0e0;
+      margin-bottom: 35px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--secondary);
+      padding: 14px 32px;
+      border-radius: 30px;
+      color: var(--white);
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #0c7c45;
+    }
+
+    .btn-outline {
+      border: 2px solid var(--white);
+      padding: 12px 30px;
+      border-radius: 30px;
+      color: var(--white);
+      transition: 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--dark);
+    }
+
+    /* =========================
+       SERVICES SECTION
+    ========================= */
+    .services {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      margin: 0 auto 60px;
+      color: #555;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--light);
+      padding: 40px 30px;
+      border-radius: 16px;
+      text-align: left;
+      transition: 0.3s;
+      border-left: 6px solid var(--secondary);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      background: #eef3f9;
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+
+    /* =========================
+       NEWS SECTION
+    ========================= */
+    .news-section {
+      background: linear-gradient(135deg, #0e1a24, #122637);
+      color: var(--white);
+    }
+
+    .news-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 50px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .news-card {
+      background: rgba(255,255,255,0.06);
+      padding: 30px;
+      border-radius: 14px;
+      transition: 0.3s;
+    }
+
+    .news-card:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .news-tag {
+      display: inline-block;
+      background: var(--secondary);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      margin-bottom: 14px;
+    }
+
+    /* =========================
+       HIGHLIGHTS SECTION
+    ========================= */
+    .highlights-section {
+      background: var(--white);
+    }
+
+    .highlights-section h2 {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 50px;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .highlight-card {
+      background: var(--dark);
+      border-radius: 18px;
+      overflow: hidden;
+      color: var(--white);
+    }
+
+    .highlight-card video {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .highlight-card h4 {
+      padding: 18px;
+      font-size: 1.05rem;
+    }
+
+    /* =========================
+       IMAGE FEATURE SECTION
+    ========================= */
+    .image-insert-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+      background: linear-gradient(135deg, #eef3f9, #ffffff);
+      padding: 60px;
+      border-radius: 24px;
+    }
+
+    .image-insert-content h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: var(--dark);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    .main-footer {
+      background: var(--dark);
+      color: #bbb;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    .main-footer span {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.4rem;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="main-header">
+    <div class="nav-container">
+      <h2 class="logo">FASL</h2>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="matches.html">Matches</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="nav-btn">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Football Agency Sierra Leone</h1>
+      <p>
+        Building professional pathways for Sierra Leonean football talent through
+        representation, development, and global exposure.
+      </p>
+      <div class="hero-actions">
+        <a href="players.html" class="btn-primary">Explore Players</a>
+        <a href="about.html" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <h2>What We Do</h2>
+    <p class="section-intro">
+      We operate as a modern football agency focused on long-term player careers,
+      professional integrity, and international football opportunities.
+    </p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Player Representation</h3>
+        <p>Career management, contract negotiation, and ethical player advocacy.</p>
+      </div>
+      <div class="service-card">
+        <h3>Scouting & Development</h3>
+        <p>Identifying elite local talent and preparing players for professional levels.</p>
+      </div>
+      <div class="service-card">
+        <h3>International Exposure</h3>
+        <p>Connecting players to clubs, academies, and scouts worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="news-section">
+    <h2>Latest Updates</h2>
+    <div class="news-grid">
+      <div class="news-card">
+        <span class="news-tag">Transfers</span>
+        <h3>International Contracts Secured</h3>
+        <p>Multiple players have signed professional deals abroad this season.</p>
+      </div>
+      <div class="news-card">
+        <span class="news-tag">Tournaments</span>
+        <h3>Regional Championship Success</h3>
+        <p>Our players delivered standout performances across West Africa.</p>
+      </div>
+      <div class="news-card">
+        <span class="news-tag">Partnerships</span>
+        <h3>New Global Football Links</h3>
+        <p>Strategic partnerships now expand pathways into elite football markets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights-section">
+    <h2>Match Highlights</h2>
+    <div class="highlights-grid">
+       <div class="player-image">
+    <img src="images/jumaba.jpg" alt=""></div>
+  </div> 
+      </div>
+      <div class="highlight-card">
+     <div class="photo-box">
+  <img src="Img/highlight.webp" alt="Photo Insert">
+</div>
+
+        
+    </div>
+  </section>
+
+               <!-- TRAINING SESSION -->
+  <section class="Training Session">
+    <h2>Match Highlights</h2>
+<div class="highlight-card">
+     <div class="photo-box">
+  <img src="Img/Train - Copy.jpg" alt="Photo Insert">
+
+  
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <p>&copy; 2025 Football Agency Sierra Leone. All Rights Reserved.</p>
+    #
+  </footer>
+
+</body>
+</html>

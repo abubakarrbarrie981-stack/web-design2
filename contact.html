@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Football Agency Sierra Leone</title>
+
+  <!-- =========================
+       CONTACT PAGE – RELATED LAYOUT, UNIQUE COLOR & FUNCTIONALITY
+  ========================= -->
+  <style>
+    :root {
+      --contact-primary: #047857;  /* Green Accent */
+      --contact-secondary: #f59e0b; /* Amber Accent */
+      --contact-dark: #065f46;     /* Deep Green */
+      --contact-light: #f0fdf4;    /* Soft Mint */
+      --white: #ffffff;
+    }
+
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--contact-light);
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      background: linear-gradient(90deg, var(--contact-dark), #064e3b);
+      padding: 16px 6%;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    nav a { color: #f0fdfa; font-size: 0.95rem; transition: 0.3s; }
+    nav a:hover, nav a.active { color: var(--contact-secondary); }
+
+    .contact-header {
+      background: linear-gradient(rgba(6,95,70,0.85), rgba(4,120,87,0.85)), url('images/contact-bg.jpg') center/cover no-repeat;
+      padding: 100px 6% 80px;
+      color: var(--white);
+      text-align: center;
+    }
+    .contact-header h1 { font-size: 2.7rem; margin-bottom: 15px; }
+    .contact-header p { max-width: 700px; margin: auto; color: #d1fae5; font-size: 1.05rem; }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 6%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info, .contact-form {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 35px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    }
+
+    .contact-info h3, .contact-form h3 {
+      font-size: 1.8rem;
+      color: var(--contact-dark);
+      margin-bottom: 20px;
+    }
+
+    .contact-info p { margin-bottom: 12px; color: #475569; font-size: 0.95rem; }
+    .social-links { color: var(--contact-primary); font-weight: 600; }
+
+    .contact-form .form-group { margin-bottom: 18px; display: flex; flex-direction: column; }
+    .contact-form label { margin-bottom: 6px; font-weight: 600; }
+    .contact-form input, .contact-form textarea {
+      padding: 12px; border-radius: 10px; border: 1px solid #d1d5db; font-size: 0.95rem;
+    }
+    .contact-form textarea { resize: vertical; min-height: 120px; }
+    .submit-btn {
+      background: var(--contact-primary); color: var(--white); font-weight: 600;
+      padding: 12px 22px; border: none; border-radius: 10px;
+      cursor: pointer; transition: 0.3s;
+    }
+    .submit-btn:hover { background: var(--contact-secondary); }
+
+    /* UNIQUE FEATURE: Map & Info Box */
+    .map-section {
+      grid-column: span 2;
+      margin-top: 60px;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    }
+    iframe { width: 100%; height: 400px; border: 0; }
+
+    footer {
+      background: linear-gradient(135deg, var(--contact-dark), #064e3b);
+      color: #cbd5e1;
+      text-align: center;
+      padding: 35px 12px;
+    }
+    footer p:last-child { font-size: 0.85rem; margin-top: 8px; color: #94a3b8; }
+
+    @media(max-width: 900px) { .container { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="players.html">Players</a></li>
+      <li><a href="matches.html">Matches</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="contact-header">
+    <h1>Contact Us</h1>
+    <p>Reach out for player representation, trials, partnership opportunities, or any inquiries. Our team is here to provide professional support and guidance.</p>
+  </header>
+
+  <section class="container">
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+      <p>📍 <strong>Address:</strong> 23 Juba Street, Freetown</p>
+      <p>📞 <strong>Phone:</strong> +232 76 123 456</p>
+      <p>✉️ <strong>Email:</strong> info@afsl981.com</p>
+      <p>🌐 <strong>Social Media:</strong></p>
+      <p class="social-links">
+        Facebook: @afsl981.barrie<br>
+        Twitter: @afsl981.linkup<br>
+        Instagram: @footballagency_afl981
+      </p>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Us A Message</h3>
+      <form>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your.email@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+232 XX XXX XXX">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="What is your inquiry about?">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us more about your inquiry..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">SEND MESSAGE</button>
+      </form>
+    </div>
+
+    <!-- UNIQUE MAP SECTION -->
+    <div class="map-section">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.123456!2d-13.234567!3d8.482345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sFootball%20Agency%20Sierra%20Leone!5e0!3m2!1sen!2sle!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Football Agency Sierra Leone. All rights reserved.</p>
+    <p>Connecting Talent • Opportunities • Professional Support</p>
+  </footer>
+
+</body>
+</html>
